@@ -178,9 +178,14 @@
 // GALLERY
 .gallery {
 	display: flex;
+
+	&__item {
+		flex: 1;
+	}
+
 	&__photo {
-		display: block;
 		width: 100%;
+		overflow: hidden;
 	}
 }
 /////////////////////////////////////////

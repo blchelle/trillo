@@ -180,9 +180,11 @@ body {
 
 .gallery {
   display: flex; }
+  .gallery__item {
+    flex: 1; }
   .gallery__photo {
-    display: block;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
 
 .overview {
   align-items: center;
