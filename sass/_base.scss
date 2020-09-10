@@ -21,6 +21,9 @@
 $bp-largest: 75em; // 1200px
 $bp-large: 68.75em; // 1100px
 $bp-medium: 56.25em; // 900px
+$bp-small: 43.75em; // 700px
+$bp-xs: 31.25em; // 500px
+$bp-mobile: 25em; // 400px
 
 * {
 	margin: 0;
@@ -52,4 +55,7 @@ body {
 	line-height: 1.6;
 
 	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
 }

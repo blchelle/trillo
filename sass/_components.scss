@@ -3,6 +3,10 @@
 .logo {
 	height: 3.25rem;
 	margin-left: 2rem;
+
+	@media only screen and (max-width: $bp-xs) {
+		margin-right: auto;
+	}
 }
 /////////////////////////////////////////
 // SEARCH
@@ -11,6 +15,13 @@
 	display: flex;
 	flex: 0 0 40%;
 	justify-content: center;
+
+	@media only screen and (max-width: $bp-xs) {
+		order: 1;
+		flex: 0 0 80%;
+		margin: 0 auto;
+	}
+
 	&__input {
 		background-color: var(--color-grey-light-2);
 		border: none;
@@ -58,6 +69,10 @@
 	align-self: stretch;
 	display: flex;
 	justify-content: space-between;
+
+	@media only screen and (max-width: $bp-xs) {
+		margin-right: 2rem;
+	}
 	& > * {
 		align-items: center;
 		cursor: pointer;
@@ -103,14 +118,18 @@
 	font-size: 1.4rem;
 	list-style: none;
 	margin-top: 3.5rem;
+
+	@media only screen and (max-width: $bp-xs) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	li:first-of-type {
 		background-color: var(--color-primary);
 	}
 	&__item {
 		position: relative;
-		&:not(:last-child) {
-			margin-bottom: 0.5rem;
-		}
+
 		&:active::before {
 			background-color: var(--color-primary-light);
 		}
@@ -131,10 +150,14 @@
 		}
 
 		@media only screen and (max-width: $bp-medium) {
-			flex: 1;
 			margin-bottom: 0;
 		}
+
+		@media only screen and (max-width: $bp-mobile) {
+			flex: 0 0 50%;
+		}
 	}
+
 	&__link:link,
 	&__link:visited {
 		align-items: center;
@@ -148,6 +171,10 @@
 
 		@media only screen and (max-width: $bp-medium) {
 			justify-content: center;
+		}
+
+		@media only screen and (max-width: $bp-xs) {
+			padding: 1.5rem 1.5rem;
 		}
 	}
 	&__icon {
@@ -194,7 +221,8 @@
 	align-items: center;
 	border-bottom: 2px solid var(--color-grey-light-2);
 	display: flex;
-	height: 5rem;
+	flex-wrap: wrap;
+
 	&__heading {
 		font-size: 2.25rem;
 		font-weight: 300;
@@ -205,6 +233,10 @@
 	&__stars {
 		display: flex;
 		margin-right: auto;
+
+		@media only screen and (max-width: $bp-xs) {
+			margin-right: auto;
+		}
 	}
 	&__icon-star,
 	&__icon-location {
@@ -219,6 +251,15 @@
 		align-items: center;
 		display: flex;
 		font-size: 1.2rem;
+
+		@media only screen and (max-width: $bp-xs) {
+			margin-right: 2rem;
+		}
+
+		@media only screen and (max-width: $bp-xs) {
+			width: 0;
+			visibility: hidden;
+		}
 	}
 	&__rating {
 		align-items: center;
@@ -230,6 +271,11 @@
 		justify-content: center;
 		margin-left: 3rem;
 		padding: 0 2.25rem;
+
+		@media only screen and (max-width: $bp-xs) {
+			margin-left: 0;
+			width: 100%;
+		}
 	}
 	&__rating-average {
 		font-size: 2.25rem;
@@ -361,14 +407,36 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+
+	@media only screen and (max-width: $bp-small) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	@media only screen and (max-width: $bp-xs) {
+		flex-direction: column;
+	}
+
 	&__review {
 		background-color: #fff;
 		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		position: relative;
 		margin-bottom: 3.5rem;
 		font-size: 1.3rem;
 		overflow: hidden;
 		box-shadow: var(--shadow-light);
+
+		@media only screen and (max-width: $bp-small) {
+			flex: 0 0 40%;
+			height: 10em;
+		}
+
+		@media only screen and (max-width: $bp-xs) {
+			margin-bottom: 2rem;
+		}
 
 		&::before {
 			content: '\201C';
@@ -400,6 +468,7 @@
 
 		&__rating {
 			font-size: 1.7rem;
+			margin-left: 1rem;
 			color: var(--color-primary);
 		}
 
@@ -414,6 +483,10 @@
 			margin-right: 1rem;
 			border-radius: 50%;
 		}
+	}
+
+	button {
+		margin: 0 auto;
 	}
 }
 
