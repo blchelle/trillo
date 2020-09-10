@@ -23,7 +23,7 @@
 	}
 
 	&__input {
-		background-color: var(--color-grey-light-2);
+		background-color: var(--color-grey-light-3);
 		border: none;
 		border-radius: 100px;
 		color: inherit;
@@ -150,6 +150,7 @@
 		}
 
 		@media only screen and (max-width: $bp-medium) {
+			flex: 0 0 25%;
 			margin-bottom: 0;
 		}
 
@@ -212,6 +213,7 @@
 
 	&__photo {
 		width: 100%;
+		height: 100%;
 		overflow: hidden;
 	}
 }
@@ -292,7 +294,6 @@
 .btn-inline {
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid currentColor;
 	cursor: pointer;
 	color: var(--color-primary);
 	display: inline-block;
@@ -300,7 +301,7 @@
 	padding-bottom: 2px;
 	transition: all 0.2s;
 
-	& span {
+	span {
 		margin-left: 3px;
 		transition: all 0.2s;
 	}
@@ -349,6 +350,11 @@
 	border-bottom: var(--line);
 	display: flex;
 	flex-wrap: wrap;
+
+	@media only screen and (max-width: $bp-mobile) {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
 
 	&__item {
 		flex: 0 0 50%;
@@ -430,8 +436,8 @@
 		box-shadow: var(--shadow-light);
 
 		@media only screen and (max-width: $bp-small) {
-			flex: 0 0 40%;
-			height: 10em;
+			flex: 0 0 48%;
+			height: 14em;
 		}
 
 		@media only screen and (max-width: $bp-xs) {
@@ -501,6 +507,7 @@
 		font-weight: 300;
 		text-transform: uppercase;
 		margin-bottom: 2.5rem;
+		padding: 0 1rem;
 	}
 
 	@media only screen and (max-width: $bp-medium) {

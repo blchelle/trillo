@@ -23,8 +23,9 @@
   box-sizing: inherit; }
 
 html {
-  box-sizing: border-ebox;
-  font-size: 62.5%; }
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden; }
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 50%; } }
@@ -33,6 +34,8 @@ body {
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  position: relative;
   color: var(--color-grey-dark-2);
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -59,7 +62,7 @@ body {
       flex: 0 0 80%;
       margin: 0 auto; } }
   .search__input {
-    background-color: var(--color-grey-light-2);
+    background-color: var(--color-grey-light-3);
     border: none;
     border-radius: 100px;
     color: inherit;
@@ -160,6 +163,7 @@ body {
       width: 100%; }
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
+        flex: 0 0 25%;
         margin-bottom: 0; } }
     @media only screen and (max-width: 25em) {
       .side-nav__item {
@@ -204,6 +208,7 @@ body {
     flex: 1; }
   .gallery__photo {
     width: 100%;
+    height: 100%;
     overflow: hidden; }
 
 .overview {
@@ -265,7 +270,6 @@ body {
 .btn-inline {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid currentColor;
   cursor: pointer;
   color: var(--color-primary);
   display: inline-block;
@@ -305,6 +309,10 @@ body {
   border-bottom: var(--line);
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 25em) {
+    .list {
+      flex-direction: column;
+      flex-wrap: nowrap; } }
   .list__item {
     flex: 0 0 50%; }
     .list__item::before {
@@ -364,8 +372,8 @@ body {
     box-shadow: var(--shadow-light); }
     @media only screen and (max-width: 43.75em) {
       .user-reviews__review {
-        flex: 0 0 40%;
-        height: 10em; } }
+        flex: 0 0 48%;
+        height: 14em; } }
     @media only screen and (max-width: 31.25em) {
       .user-reviews__review {
         margin-bottom: 2rem; } }
@@ -411,7 +419,8 @@ body {
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 2.5rem; }
+    margin-bottom: 2.5rem;
+    padding: 0 1rem; }
   @media only screen and (max-width: 56.25em) {
     .cta {
       padding: 2.5rem 0; } }

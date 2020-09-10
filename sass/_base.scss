@@ -37,8 +37,9 @@ $bp-mobile: 25em; // 400px
 }
 
 html {
-	box-sizing: border-ebox;
+	box-sizing: border-box;
 	font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+	overflow-x: hidden;
 
 	@media only screen and (max-width: $bp-large) {
 		font-size: 50%;
@@ -49,6 +50,8 @@ body {
 	background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow-x: hidden;
+	position: relative;
 	color: var(--color-grey-dark-2);
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
